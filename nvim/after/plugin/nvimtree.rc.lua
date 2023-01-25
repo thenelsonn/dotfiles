@@ -11,7 +11,7 @@ tree.setup {
   },
   renderer = {
     full_name = false,
-    group_empty = false,
+    group_empty = true,
     highlight_git = false,
     indent_width = 1,
     indent_markers = {
