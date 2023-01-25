@@ -13,3 +13,4 @@ keymap("n", "<Space>l", "<C-w>l", opts)
 keymap("n", "ss", "<Cmd>split<Cr>", opts)
 keymap("n", "sv", "<Cmd>vsplit<Cr>", opts)
 
+keymap("n", "<Space>e", "<Cmd>NvimTreeOpen<Cr>", opts)
