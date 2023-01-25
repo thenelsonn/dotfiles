@@ -23,4 +23,5 @@ end
 return packer.startup(function(use)
   use("wbthomason/packer.nvim")       -- let packer.nvim manage itself
   use("nvim-tree/nvim-tree.lua")      -- a file explorer tree
+  use("nvim-tree/nvim-web-devicons")  -- icon pack for plugins
 end)
