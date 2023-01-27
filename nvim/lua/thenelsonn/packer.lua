@@ -28,4 +28,6 @@ return packer.startup(function(use)
 
   use("nvim-telescope/telescope.nvim")    -- highly extendable fuzzy finder
   use("nvim-lua/plenary.nvim")
+  
+  use("edeneast/nightfox.nvim")           -- colorscheme
 end)
