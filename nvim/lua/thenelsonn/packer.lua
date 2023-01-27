@@ -29,5 +29,6 @@ return packer.startup(function(use)
   use("nvim-telescope/telescope.nvim")    -- highly extendable fuzzy finder
   use("nvim-lua/plenary.nvim")
   
+  use("nvim-lualine/lualine.nvim")        -- neovim statusline
   use("edeneast/nightfox.nvim")           -- colorscheme
 end)
