@@ -33,4 +33,6 @@ return packer.startup(function(use)
   use("edeneast/nightfox.nvim")           -- colorscheme
 
   use("nvim-treesitter/nvim-treesitter")  -- an incremental parsing system
+  use("windwp/nvim-ts-autotag")           -- an autotag plugin
+  use("windwp/nvim-autopairs")            -- an autopair plugin
 end)
