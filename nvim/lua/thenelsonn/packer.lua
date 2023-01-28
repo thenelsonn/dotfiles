@@ -31,4 +31,6 @@ return packer.startup(function(use)
   
   use("nvim-lualine/lualine.nvim")        -- neovim statusline
   use("edeneast/nightfox.nvim")           -- colorscheme
+
+  use("nvim-treesitter/nvim-treesitter")  -- an incremental parsing system
 end)
