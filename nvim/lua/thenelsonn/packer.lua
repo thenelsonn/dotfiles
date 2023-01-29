@@ -3,7 +3,7 @@ vim.cmd("packadd packer.nvim")
 local fn = vim.fn
 local pth = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(pth)) > 0 then
-  vim.notify("Packer can't be loaded, since it not installed on your system")
+  vim.notify("Packer can't be loaded, since it's not installed on your system")
   return
 end
 
