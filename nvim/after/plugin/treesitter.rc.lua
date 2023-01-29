@@ -9,7 +9,6 @@ configs.setup({
   ensure_installed = {},
   sync_install = false,
   auto_install = true,
-  
   highlight = {
     enable = true,
     disable = {},
@@ -17,5 +16,9 @@ configs.setup({
   indent = {
     enable = true,
     disable = {},
+  },
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
   },
 })
