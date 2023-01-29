@@ -15,3 +15,5 @@ keymap("n", "sv", "<Cmd>vsplit<Cr>", opts)
 
 keymap("n", "<Space>e", "<Cmd>NvimTreeOpen<Cr>", opts)
 keymap("n", "<Space>w", "<Cmd>Telescope find_files<Cr>", opts)
+
+keymap("n", "<Space>l", "<Cmd>Alpha<Cr>", opts)

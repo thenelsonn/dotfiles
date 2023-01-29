@@ -31,6 +31,7 @@ return packer.startup(function(use)
   
   use("nvim-lualine/lualine.nvim")                    -- neovim statusline
   use("edeneast/nightfox.nvim")                       -- colorscheme
+  use("goolord/alpha-nvim")                            -- neovim greeter
 
   use("nvim-treesitter/nvim-treesitter")              -- an incremental parsing system
   use("windwp/nvim-ts-autotag")                       -- an autotag plugin
