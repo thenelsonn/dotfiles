@@ -9,11 +9,11 @@ comment.setup({
   ignore = nil,
   toggler = {
     line = 'ce',
-    block = 'be',
+    block = 'cbe',
   },
   opleader = {
     line = 'ce',
-    block = 'be',
+    block = 'cbe',
   },
   mappings = {
     basic = true,
