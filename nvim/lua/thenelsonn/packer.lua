@@ -39,4 +39,12 @@ return packer.startup(function(use)
 
   use("numToStr/Comment.nvim")                        -- comment plugin
   use("JoosepAlviste/nvim-ts-context-commentstring")  -- extension to Comment.nvim and treesitter
+
+  use("hrsh7th/nvim-cmp")                             -- a completion plugin coded in Lua
+  use("hrsh7th/cmp-nvim-lsp")                         -- nvim-cmp source for neovim's built-in language server client
+  use("hrsh7th/cmp-buffer")                           -- nvim-cmp source for buffer words
+  use("hrsh7th/cmp-path")                             -- nvim-cmp source for path
+  use("hrsh7th/cmp-cmdline")                          -- nvim-cmp source for vim's cmdline
+
+  use("neovim/nvim-lspconfig")                        -- configuration for Nvim LSP
 end)
