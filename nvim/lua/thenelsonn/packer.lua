@@ -50,5 +50,6 @@ return packer.startup(function(use)
 
   use("neovim/nvim-lspconfig")                        -- configuration for Nvim LSP
   use("williamboman/mason.nvim")                      -- portable package manager
+  use("jose-elias-alvarez/null-ls.nvim")              -- lsp diagnostics, code actions, and more
   use("williamboman/mason-lspconfig.nvim")            -- extension to mason.nvim
 end)
