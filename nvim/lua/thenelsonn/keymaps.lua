@@ -10,10 +10,17 @@ keymap("n", "<Space>l", "<C-w>l", opts)
 
 --
 -- Window split
-keymap("n", "ss", "<Cmd>split<Cr>", opts)
-keymap("n", "sv", "<Cmd>vsplit<Cr>", opts)
+keymap("n", "ss", "<cmd>split<CR>", opts)
+keymap("n", "sv", "<cmd>vsplit<CR>", opts)
 
-keymap("n", "<Space>e", "<Cmd>NvimTreeOpen<Cr>", opts)
-keymap("n", "<Space>w", "<Cmd>Telescope find_files<Cr>", opts)
+keymap("n", "<Space>e", "<cmd>NvimTreeOpen<CR>", opts)
+keymap("n", "<Space>w", "<cmd>Telescope find_files<CR>", opts)
 
-keymap("n", "<Space>l", "<Cmd>Alpha<Cr>", opts)
+keymap("n", "<Space>l", "<cmd>Alpha<CR>", opts)
+
+--
+-- Diagnostics
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
