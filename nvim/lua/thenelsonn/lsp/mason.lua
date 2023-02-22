@@ -41,7 +41,7 @@ local capabilities = cmp_nvim_lsp.default_capabilities(
 
 for _, server in pairs(servers) do
   local opts = { on_attach, capabilities }
-  local extend_required, conf_opts = pcall(require, "thenelsonn.lsp.setting." .. server)
+  local extend_required, conf_opts = pcall(require, "thenelsonn.lsp.settings." .. server)
   if extend_required then
     opts = vim.tbl_deep_extend("force", conf_opts, opts)
   end
