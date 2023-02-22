@@ -1,9 +1,9 @@
 local servers = {
 	"lua_ls",
-  "pyright",
-  "jsonls",
-  "clangd",
-  "bashls"
+	"pyright",
+	"jsonls",
+	"clangd",
+	"bashls",
 } -- list of LSPs to be configured
 local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
