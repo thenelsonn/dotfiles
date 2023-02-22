@@ -47,4 +47,6 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-cmdline")                          -- nvim-cmp source for vim's cmdline
 
   use("neovim/nvim-lspconfig")                        -- configuration for Nvim LSP
+  use("williamboman/mason.nvim")                      -- portable package manager
+  use("williamboman/mason-lspconfig.nvim")            -- extension to mason.nvim
 end)
