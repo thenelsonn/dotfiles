@@ -1,4 +1,7 @@
 local cmp_status, cmp = pcall(require, "cmp")
+if not cmp_status then
+  return
+end
 
 local kind_icons = {
   Text = "",
@@ -9,8 +12,7 @@ local kind_icons = {
   Variable = "",
   Class = "",
   Interface = "",
-  Module = "",
-  Property = "",
+  Module = "", Property = "",
   Unit = "",
   Value = "",
   Enum = "",
@@ -30,10 +32,10 @@ local kind_icons = {
 
 cmp.setup({
   snippet = {},
-  window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
-  },
+  -- window = {
+  --   completion = cmp.config.window.bordered(),
+  --   documentation = cmp.config.window.bordered(),
+  -- },
   mapping = cmp.mapping.preset.insert({
     ["<Tab>"] = function(fallback)
       if cmp.visible() then
