@@ -49,13 +49,6 @@ cmp.setup({
         fallback()
       end
     end,
-    ["<CR>"] = function(fallback)
-      if cmp.visible() then
-        cmp.confirm()
-      else
-        fallback()
-      end
-    end,
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp", group_index = 1 },
