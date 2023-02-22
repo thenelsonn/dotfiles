@@ -4,8 +4,6 @@ if not cmp_status or not lspkind_status then
   return
 end
 
-
-
 cmp.setup({
   snippet = {},
   -- window = {
@@ -36,11 +34,17 @@ cmp.setup({
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = lspkind.cmp_format({
-      mode = "symbol",
+      mode = "symbol_text",
       max_width = 50,
-      before = function(_, vim_item)
+      before = function(entry, vim_item)
+        vim_item.menu = ({
+          nvim_lsp = "[LSP]",
+          buffer = "[Buffer]",
+          path = "[Path]",
+        })[entry.source.name]
         return vim_item
       end
     })
   }
 })
+
