@@ -4,20 +4,11 @@ for type, icon in pairs(signs) do
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-vim.diagnostic.config({
-  virtual_text = true,
-  signs = {
-    active = signs,
-  },
-  update_in_insert = false,
-  underline = true,
-  severity_sort = true,
-  float = {
-    focusable = true,
-    style = "minimal",
-    border = "none",
-    source = "none",
-    header = "",
-    prefix = "",
-  },
-})
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    severity_sort = true,
+    virtual_text = false,
+    update_in_insert = false,
+  }
+)
