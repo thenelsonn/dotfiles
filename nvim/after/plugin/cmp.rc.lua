@@ -1,34 +1,10 @@
+local lspkind_status, lspkind = pcall(require, "lspkind")
 local cmp_status, cmp = pcall(require, "cmp")
-if not cmp_status then
+if not cmp_status or not lspkind_status then
   return
 end
 
-local kind_icons = {
-  Text = "",
-  Method = "m",
-  Function = "",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "",
-  Interface = "",
-  Module = "", Property = "",
-  Unit = "",
-  Value = "",
-  Enum = "",
-  Keyword = "",
-  Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "",
-  Event = "",
-  Operator = "",
-  TypeParameter = "",
-}
+
 
 cmp.setup({
   snippet = {},
@@ -59,14 +35,12 @@ cmp.setup({
   }),
   formatting = {
     fields = { "kind", "abbr", "menu" },
-    format = function(entry, vim_item)
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      vim_item.menu = ({
-        nvim_lsp = "[LSP]",
-        buffer = "[Buffer]",
-        path = "[Path]",
-      })[entry.source.name]
-      return vim_item
-    end,
+    format = lspkind.cmp_format({
+      mode = "symbol",
+      max_width = 50,
+      before = function(_, vim_item)
+        return vim_item
+      end
+    })
   }
 })

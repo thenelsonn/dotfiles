@@ -28,7 +28,7 @@ return packer.startup(function(use)
 
   use("nvim-telescope/telescope.nvim")                -- highly extendable fuzzy finder
   use("nvim-lua/plenary.nvim")
-  
+
   use("nvim-lualine/lualine.nvim")                    -- neovim statusline
   use("edeneast/nightfox.nvim")                       -- colorscheme
   use("goolord/alpha-nvim")                            -- neovim greeter
@@ -45,6 +45,8 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-buffer")                           -- nvim-cmp source for buffer words
   use("hrsh7th/cmp-path")                             -- nvim-cmp source for path
   use("hrsh7th/cmp-cmdline")                          -- nvim-cmp source for vim's cmdline
+
+  use("onsails/lspkind.nvim")                         -- vscode-like pictograms
 
   use("neovim/nvim-lspconfig")                        -- configuration for Nvim LSP
   use("williamboman/mason.nvim")                      -- portable package manager
