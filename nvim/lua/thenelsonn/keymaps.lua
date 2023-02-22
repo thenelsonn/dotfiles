@@ -16,8 +16,6 @@ keymap("n", "sv", "<cmd>vsplit<CR>", opts)
 keymap("n", "<Space>e", "<cmd>NvimTreeOpen<CR>", opts)
 keymap("n", "<Space>w", "<cmd>Telescope find_files<CR>", opts)
 
-keymap("n", "<Space>l", "<cmd>Alpha<CR>", opts)
-
 --
 -- Diagnostics
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
