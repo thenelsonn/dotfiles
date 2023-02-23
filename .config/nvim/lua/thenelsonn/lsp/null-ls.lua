@@ -10,7 +10,7 @@ null_ls.setup({
 	debug = false,
 	sources = {
 		formatting.stylua,
-		formatting.prettier,
+		formatting.prettierd,
 		formatting.clang_format,
 		diagnostics.eslint,
 	},

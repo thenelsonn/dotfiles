@@ -8,12 +8,12 @@ comment.setup({
 	sticky = true,
 	ignore = nil,
 	toggler = {
-		line = "ce",
-		block = "cbe",
+		line = "ec",
+		block = "ebc",
 	},
 	opleader = {
-		line = "ce",
-		block = "cbe",
+		line = "ec",
+		block = "ebc",
 	},
 	mappings = {
 		basic = true,

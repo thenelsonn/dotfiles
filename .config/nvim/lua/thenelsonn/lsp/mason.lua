@@ -4,6 +4,7 @@ local servers = {
 	"jsonls",
 	"clangd",
 	"bashls",
+	"tsserver",
 } -- list of LSPs to be configured
 local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
@@ -44,7 +45,7 @@ local on_attach = function(client, bufnr)
 			group = vim.api.nvim_create_augroup("Format", { clear = true }),
 			buffer = bufnr,
 			callback = function()
-				vim.lsp.buf.format({ sync = false })
+				vim.lsp.buf.format({ sync = true })
 			end,
 		})
 	end
