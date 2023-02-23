@@ -9,6 +9,7 @@ local servers = {
 local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+local illuminate_status, illuminate = pcall(require, "illuminate")
 local mason_status, mason = pcall(require, "mason")
 
 if not mason_status or not mason_lspconfig_status or not lspconfig_status or not cmp_nvim_lsp_status then
@@ -48,6 +49,10 @@ local on_attach = function(client, bufnr)
 				vim.lsp.buf.format({ sync = true })
 			end,
 		})
+	end
+
+	if illuminate_status then
+		illuminate.on_attach(client)
 	end
 end
 

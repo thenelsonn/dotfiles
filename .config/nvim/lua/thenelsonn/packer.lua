@@ -54,4 +54,6 @@ return packer.startup(function(use)
 	use("williamboman/mason.nvim") -- portable package manager
 	use("jose-elias-alvarez/null-ls.nvim") -- lsp diagnostics, code actions, and more
 	use("williamboman/mason-lspconfig.nvim") -- extension to mason.nvim
+
+	use("RRethy/vim-illuminate") -- auto highlight other uses of the word
 end)
