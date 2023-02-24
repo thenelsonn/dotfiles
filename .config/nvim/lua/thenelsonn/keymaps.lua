@@ -13,7 +13,7 @@ keymap("n", "<Space>l", "<C-w>l", opts)
 keymap("n", "ss", "<cmd>split<CR>", opts)
 keymap("n", "sv", "<cmd>vsplit<CR>", opts)
 
-keymap("n", "<Space>e", "<cmd>NvimTreeOpen<CR>", opts)
+keymap("n", "<Space>e", "<cmd>Telescope file_browser<CR>", opts)
 keymap("n", "<Space>w", "<cmd>Telescope find_files<CR>", opts)
 
 --
