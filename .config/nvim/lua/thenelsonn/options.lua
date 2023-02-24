@@ -1,28 +1,48 @@
+-- options.lua
+-- set of (Neo)vim default configuration options
+
 local options = {
-	fileencoding = "utf-8", -- set file encoding
-	clipboard = "unnamedplus", -- sync system clipboard
-	swapfile = false, -- do not create a swapfile
-	undofile = true, -- save undo info in a file
-	backup = false, -- do not keep backup after overwriting a file
-	writebackup = false, -- do not make a backup before overwriting a file
-	relativenumber = true, -- use relative line numbers
-	number = true, -- show line numbers
-	signcolumn = "yes", -- display the sign column
-	showmode = false, -- don't show current mode on the status line
-	cmdheight = 2, -- number of lines for a command line
-	wrap = false, -- do not wrap lines
-	linebreak = false, -- do not wrap long lines at a blank
+	completeopt = { "menuone", "noselect" }, -- options for Insert mode completion
+	clipboard = "unnamedplus", -- sync (Neo)vim with the system clipboard
+	updatetime = 300, -- after this many milliseconds flush swap file
+	timeoutlen = 300, -- time out time in milliseconds
+	mouse = "a", -- enable mouse
+	-- indenting & formatting -----------------------------------------------------
+	smarttab = true, -- use shiftwidth when inserting <Tab>
 	smartcase = true, -- no ignore case when pattern has uppercase
-	smartindent = true, -- smart autoindenting for C programs
-	expandtab = true, -- replace tabs with spaces
-	shiftwidth = 2, -- number of spaces to use for one indent step
-	tabstop = 2, -- number of spaces for a tab
-	termguicolors = true, -- enable termguicolors
+	smartindent = true, -- smart autoindenting
+	expandtab = true, -- use spaces when <Tab> is inserted
+	softtabstop = 2, -- number of spaces that <Tab> uses while editing
+	shiftwidth = 2, -- number of spaces to use for (auto)indent step
+	tabstop = 2, -- number of spaces that <Tab> in file uses
+	wrap = false, -- display each line in the single row
+	-- window ---------------------------------------------------------------------
+	relativenumber = true, -- show relative line numbers in front of each line
+	numberwidth = 4, -- number of columns used for the line number
+	splitright = true, -- force vertical splits to the right side of current window
+	splitbelow = true, -- force hotizontal splits below current window
+	cmdheight = 2, -- number of lines to use for the command-line
+	pumheight = 10, -- maximum number of items to show in the popup menu
+	showmode = false, -- don't show current mode on status line
+	cursorline = true, -- highlight the screen line of the cursor
+	signcolumn = "yes", -- display the sign column
+	scrolloff = 8, -- minimum nr. of lines above and below cursor
+	sidescrolloff = 8, -- min nr. of columns to left and right of cursor
+	-- file -----------------------------------------------------------------------
+	fileencoding = "utf-8", -- file encoding for multibyte text
+	encoding = "utf-8", -- encoding used internally
+	undofile = true, -- save undo information in a file
+	swapfile = false, -- don't use a swapfile for a buffer
+	backup = false, -- don't keep backup file after overwriting a file
+	writebackup = false, -- don't make a backup before overwriting a file
+	-- search ---------------------------------------------------------------------
+	ignorecase = true,
+	hlsearch = true,
 }
 
 -- C indentation fix
 vim.cmd("setlocal cindent cino=j1,(0,ws,Ws")
 
-for i, j in pairs(options) do
-	vim.opt[i] = j
+for key, value in pairs(options) do
+	vim.opt[key] = value
 end
