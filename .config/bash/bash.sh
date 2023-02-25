@@ -33,3 +33,4 @@ shopt -s checkwinsize # check window size after each command
 # Imports
 # --------
 . ~/.config/bash/aliases.sh # load aliases
+. ~/.config/bash/functions.sh # load functions
