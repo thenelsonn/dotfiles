@@ -8,11 +8,7 @@ telescope.setup({
   defaults = {
     respect_gitignore = true,
     hidden = true,
-    mappings = {
-      i = {
-        ["<esc>"] = actions.close,
-      },
-    },
+    mappings = {},
   },
   extensions = {
     file_browser = {
@@ -23,7 +19,7 @@ telescope.setup({
       grouped = true,
       hidden = true,
       theme = "dropdown",
-      initial_mode = "normal",
+      initial_mode = "insert",
       hijack_netrw = true,
       mappings = {},
     },
