@@ -1,0 +1,26 @@
+# starship.toml 
+# the minimal, blazing-fast, and infinitely
+# customizable prompt for any shell
+
+# view more on: 
+# https://starship.rs/config/
+
+# Use custom format
+format = "$directory$git_branch$character"
+
+# Do not insert blank line between shell prompts
+add_newline = false
+
+[directory]
+truncation_length = 8
+truncate_to_repo = true
+truncation_symbol = ""
+format = '[\[$path\] ]($style)'
+style = "bold cyan"
+
+[git_branch]
+format = '[\($branch(:$remote_branch)\) ]($style)'
+style = "bold red"
+
+[character]
+format = '[~\$> ](bold green)'
