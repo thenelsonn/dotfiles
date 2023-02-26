@@ -16,12 +16,18 @@ alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 # ---
 # Navigation
 # -----------
-alias repos="cd ~/repos" 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
 alias home="cd"
+alias repos="cd ~/repos" 
+alias personal="cd ~/personal"
 
 # ---
 # Other
 # ------
+alias v="nvim"
 alias vim="nvim"
 alias fd="fdfind"
 alias l="ls -CF"
