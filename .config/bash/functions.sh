@@ -3,7 +3,11 @@
 # tmux sessionizer
 ts() {
   clear
-  selected=$(find ~/repos ~/.config -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+  selected=$(find ~/personal ~/repos ~/.config -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+  if [[ -z $selected ]]; then
+    return 0
+  fi
+
   selected_name=$(basename $selected)
   tmux_running=$(pgrep tmux)
 
