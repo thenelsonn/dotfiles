@@ -24,6 +24,9 @@ alias home="cd"
 alias repos="cd ~/repos" 
 alias personal="cd ~/personal"
 
+alias keyrings="cd /usr/share/keyrings"
+alias sources="cd /etc/apt/sources.list.d/"
+
 # ---
 # Other
 # ------
