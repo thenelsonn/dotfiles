@@ -59,4 +59,6 @@ return packer.startup(function(use)
 
   use("L3MON4D3/LuaSnip") -- Snippet engine for neovim
   use("rafamadriz/friendly-snippets") -- set of preconfigured snippets for different languages
+
+  use("iamcco/markdown-preview.nvim") -- markdown preview plugin for (neo)vim
 end)
