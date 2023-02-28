@@ -30,6 +30,12 @@ shopt -s histappend # append history instead of overwriting
 shopt -s checkwinsize # check window size after each command
 
 # ---
+# Starship
+# ---------
+eval "$(starship init bash)" # initialize starship
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
+# ---
 # Imports
 # --------
 . ~/.config/bash/aliases.sh # load aliases
