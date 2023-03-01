@@ -4,7 +4,6 @@ if not null_ls_status then
 end
 
 local formatting = null_ls.builtins.formatting
-local diagnostics = null_ls.builtins.diagnostics
 
 null_ls.setup({
   debug = false,
@@ -12,6 +11,7 @@ null_ls.setup({
     formatting.stylua.with({ extra_args = { "--indent-type Spaces", "--indent-width 2" } }),
     formatting.prettierd,
     formatting.clang_format,
+    formatting.rustfmt,
     -- diagnostics.eslint,
   },
 })

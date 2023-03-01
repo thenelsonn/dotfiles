@@ -2,7 +2,6 @@
 -- set of (Neo)vim default configuration options
 
 local options = {
-  completeopt = { "menuone", "noselect" }, -- options for Insert mode completion
   clipboard = "unnamedplus", -- sync (Neo)vim with the system clipboard
   updatetime = 300, -- after this many milliseconds flush swap file
   timeoutlen = 300, -- time out time in milliseconds

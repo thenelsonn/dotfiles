@@ -42,23 +42,32 @@ return packer.startup(function(use)
 
   use("lewis6991/gitsigns.nvim") -- git integration
 
-  use("hrsh7th/nvim-cmp") -- a completion plugin coded in Lua
-  use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's built-in language server client
-  use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
-  use("hrsh7th/cmp-path") -- nvim-cmp source for path
-  use("hrsh7th/cmp-cmdline") -- nvim-cmp source for vim's cmdline
-  use("saadparwaiz1/cmp_luasnip") -- luasnip completion source for nvim-cmp
+  use("iamcco/markdown-preview.nvim") -- markdown preview plugin for (neo)vim
 
   use("onsails/lspkind.nvim") -- vscode-like pictograms
 
-  use("neovim/nvim-lspconfig") -- configuration for Nvim LSP
-  use("williamboman/mason.nvim") -- portable package manager
   use("jose-elias-alvarez/null-ls.nvim") -- lsp diagnostics, code actions, and more
-  use("williamboman/mason-lspconfig.nvim") -- extension to mason.nvim
   use("RRethy/vim-illuminate") -- auto highlight other uses of the word
 
-  use("L3MON4D3/LuaSnip") -- Snippet engine for neovim
-  use("rafamadriz/friendly-snippets") -- set of preconfigured snippets for different languages
+  use("simrat39/rust-tools.nvim") -- tools for better development in rust using Neovim's LSP
 
-  use("iamcco/markdown-preview.nvim") -- markdown preview plugin for (neo)vim
+  use({
+    "VonHeikemen/lsp-zero.nvim", -- a starting point to setup lsp related features
+    requires = {
+      -- LSP Support
+      "neovim/nvim-lspconfig", -- configuration for Nvim LSP
+
+      -- Autocompletion
+      "hrsh7th/nvim-cmp", -- a completion plugin coded in Lua
+      "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words
+      "hrsh7th/cmp-path", -- nvim-cmp source for path
+      "hrsh7th/cmp-cmdline", -- nvim-cmp source for (Neo)vim's command-line
+      "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for Neovim's built-in LSP
+      "saadparwaiz1/cmp_luasnip", -- nvim-cmp source for luasnip completion
+
+      -- Snippets
+      "L3MON4D3/LuaSnip", -- snippet engine for Neovim
+      "rafamadriz/friendly-snippets", -- a set of preconfigured snippets
+    }
+  })
 end)
