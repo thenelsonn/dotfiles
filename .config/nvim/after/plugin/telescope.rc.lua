@@ -1,6 +1,6 @@
 local telescope_status, telescope = pcall(require, "telescope")
-local actions_status, actions = pcall(require, "telescope.actions")
-if not telescope_status or not actions_status then
+local builtin_status, builtin = pcall(require, "telescope.builtin")
+if not telescope_status or not builtin_status then
   return
 end
 
@@ -11,3 +11,5 @@ telescope.setup({
     mappings = {},
   }
 })
+
+vim.keymap.set("n", "<space>w", builtin.find_files)
