@@ -7,67 +7,41 @@ if fn.empty(fn.glob(pth)) > 0 then
   return
 end
 
--- Automatically sync packages
-vim.cmd([[
-  augroup packer_user_config
-  autocmd!
-  autocmd BufWritePost packer.lua source <afile> | PackerSync
-  augroup end
-]])
+require("packer").startup(function(use)
+  use("wbthomason/packer.nvim")            -- let packer.nvim manage itself
 
-local p_status, packer = pcall(require, "packer")
-if not p_status then
-  return
-end
+  use("goolord/alpha-nvim")                -- neovim greeter
+  use("edeneast/nightfox.nvim")            -- colorscheme
+  use("nvim-lualine/lualine.nvim")         -- neovim statusline
 
-return packer.startup(function(use)
-  use("wbthomason/packer.nvim") -- let packer.nvim manage itself
+  use("nvim-telescope/telescope.nvim")     -- highly extendable fuzzy finder
 
-  use("nvim-tree/nvim-web-devicons") -- icon pack for plugins
+  use("nvim-treesitter/nvim-treesitter")   -- an incremental parsing system
+  use("windwp/nvim-ts-autotag")            -- an autotag plugin
+  use("windwp/nvim-autopairs")             -- an autopair plugin
+  use("numToStr/Comment.nvim")             -- comment plugin
 
-  use("nvim-telescope/telescope-file-browser.nvim") -- file browser extension for telescope.nvim
-  use("nvim-telescope/telescope.nvim") -- highly extendable fuzzy finder
+  use("williamboman/mason-lspconfig.nvim") -- an extension for mason.nvim
+  use("williamboman/mason.nvim")           -- portable package manager
+
+  use("jose-elias-alvarez/null-ls.nvim")   -- lsp diagnostics, code actions, and more
+  use("VonHeikemen/lsp-zero.nvim")         -- a starting point to setup lsp related features
+  use("neovim/nvim-lspconfig")             -- configuration for Neovim's built-in LSP
+  use("onsails/lspkind.nvim")              -- vscode-like pictograms
+
+  use("hrsh7th/nvim-cmp")                  -- a completion plugin
+  use("hrsh7th/cmp-path")                  -- nvim-cmp source for path
+  use("hrsh7th/cmp-buffer")                -- nvim-cmp source for buffer words
+  use("hrsh7th/cmp-cmdline")               -- nvim-cmp source for cmd commands
+  use("hrsh7th/cmp-nvim-lsp")              -- nvim-cmp source for LSP
+  use("saadparwaiz1/cmp_luasnip")          -- nvim-cmp source for luasnip completion
+
+  use("L3MON4D3/LuaSnip")                  -- snippet engine
+  use("rafamadriz/friendly-snippets")      -- a set of preconfigured snippets
+
+  use("iamcco/markdown-preview.nvim")      -- markdown preview plugin for (neo)vim
+  use("nvim-tree/nvim-web-devicons")       -- icon pack for plugins
+  use("lewis6991/gitsigns.nvim")           -- git integration
+  use("RRethy/vim-illuminate")             -- auto highlight other uses of the word
   use("nvim-lua/plenary.nvim")
-
-  use("nvim-lualine/lualine.nvim") -- neovim statusline
-  use("edeneast/nightfox.nvim") -- colorscheme
-  use("goolord/alpha-nvim") -- neovim greeter
-
-  use("nvim-treesitter/nvim-treesitter") -- an incremental parsing system
-  use("windwp/nvim-ts-autotag") -- an autotag plugin
-  use("windwp/nvim-autopairs") -- an autopair plugin
-
-  use("numToStr/Comment.nvim") -- comment plugin
-  use("JoosepAlviste/nvim-ts-context-commentstring") -- extension to Comment.nvim and treesitter
-
-  use("lewis6991/gitsigns.nvim") -- git integration
-
-  use("iamcco/markdown-preview.nvim") -- markdown preview plugin for (neo)vim
-
-  use("onsails/lspkind.nvim") -- vscode-like pictograms
-
-  use("jose-elias-alvarez/null-ls.nvim") -- lsp diagnostics, code actions, and more
-  use("RRethy/vim-illuminate") -- auto highlight other uses of the word
-
-  use("simrat39/rust-tools.nvim") -- tools for better development in rust using Neovim's LSP
-
-  use({
-    "VonHeikemen/lsp-zero.nvim", -- a starting point to setup lsp related features
-    requires = {
-      -- LSP Support
-      "neovim/nvim-lspconfig", -- configuration for Nvim LSP
-
-      -- Autocompletion
-      "hrsh7th/nvim-cmp", -- a completion plugin coded in Lua
-      "hrsh7th/cmp-buffer", -- nvim-cmp source for buffer words
-      "hrsh7th/cmp-path", -- nvim-cmp source for path
-      "hrsh7th/cmp-cmdline", -- nvim-cmp source for (Neo)vim's command-line
-      "hrsh7th/cmp-nvim-lsp", -- nvim-cmp source for Neovim's built-in LSP
-      "saadparwaiz1/cmp_luasnip", -- nvim-cmp source for luasnip completion
-
-      -- Snippets
-      "L3MON4D3/LuaSnip", -- snippet engine for Neovim
-      "rafamadriz/friendly-snippets", -- a set of preconfigured snippets
-    }
-  })
 end)

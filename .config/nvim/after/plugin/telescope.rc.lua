@@ -9,21 +9,5 @@ telescope.setup({
     respect_gitignore = true,
     hidden = true,
     mappings = {},
-  },
-  extensions = {
-    file_browser = {
-      layout_config = { height = 40 },
-      cwd = vim.fn.expand("%:p:h"),
-      respect_gitignore = true,
-      previewer = false,
-      grouped = true,
-      hidden = true,
-      theme = "dropdown",
-      initial_mode = "insert",
-      hijack_netrw = true,
-      mappings = {},
-    },
-  },
+  }
 })
-
-telescope.load_extension("file_browser")
