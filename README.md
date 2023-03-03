@@ -27,32 +27,17 @@ Unix-like operating systems
 
 ## Installation
 
-This configuration requires certain packages, dependencies, 
-and tools in order to work properly. The following set of commands 
-should cover the entire installation process on Debian Linux systems:
+In order to clone this repository onto your system, execute the following 
+set of commands inside your terminal:
     
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install git curl tmux fd-find
-
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-    curl -sS https://starship.rs/install.sh | sh
-
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-
     git clone --bare https://github.com/thenelsonn/dotfiles $HOME/.cfg
-    git checkout
 
     echo "if [ -f ~/.config/bash/bash.sh ]; then
         . ~/.config/bash/bash.sh
     fi" >> $HOME/.bashrc
-    exit
+    source ~/.bashrc
 
-**Note**: If you have any problems with the installation process or further usage, 
-you still may have some missing dependencies or tools. Please refer 
-to the [products'](#contents) official documentation.
+    config config --local status.showUntrackedFiles no
 
 ## Neovim
 
