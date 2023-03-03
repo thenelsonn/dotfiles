@@ -23,6 +23,7 @@ customizable prompt for any shell
 that comes with sensible defaults, but allows for extensive configuration
 - [Tmux](https://github.com/tmux/tmux) - open-source terminal multiplexer for 
 Unix-like operating systems
+- [i3](https://github.com/i3/i3) - a tiling window manager for X11
 
 ## Installation
 
