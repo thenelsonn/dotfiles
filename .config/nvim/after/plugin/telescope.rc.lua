@@ -9,7 +9,16 @@ telescope.setup({
     respect_gitignore = true,
     hidden = true,
     mappings = {},
+  },
+  extensions = {
+    file_browser = {
+      hijack_netrw = true,
+    }
   }
 })
 
+telescope.load_extension("file_browser")
+local browser = telescope.extensions.file_browser
+
 vim.keymap.set("n", "<space>w", builtin.find_files)
+vim.keymap.set("n", "<space>e", browser.file_browser)
