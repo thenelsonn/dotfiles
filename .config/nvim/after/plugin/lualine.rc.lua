@@ -1,8 +1,5 @@
 local lualine_status, lualine = pcall(require, "lualine")
-if not lualine_status then
-  vim.notify("Lualine is not installed")
-  return
-end
+if not lualine_status then return end
 
 lualine.setup({
   options = {

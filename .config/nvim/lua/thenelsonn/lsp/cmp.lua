@@ -3,7 +3,7 @@ local luasnip_status, luasnip = pcall(require, "luasnip")
 local cmp_status, cmp = pcall(require, "cmp")
 if not cmp_status or not luasnip_status
     or not lspkind_status then
-  return {}
+  return nil
 end
 
 local M = {}
@@ -22,8 +22,8 @@ M.snippet = {
 
 -- set key mappings for autocompletion
 M.mapping = cmp.mapping.preset.insert({
-  ["<CR>"] = cmp.mapping.confirm({ select = false }),
-  ["<Tab>"] = function(fallback)
+      ["<CR>"] = cmp.mapping.confirm({ select = false }),
+      ["<Tab>"] = function(fallback)
     if cmp.visible() then
       cmp.select_next_item()
     elseif luasnip.expand_or_jumpable() then
@@ -32,11 +32,11 @@ M.mapping = cmp.mapping.preset.insert({
       fallback()
     end
   end,
-  ["<S-Tab>"] = function(fallback)
+      ["<S-Tab>"] = function(fallback)
     if cmp.visible() then
       cmp.select_prev_item()
-    elseif luasnip.jumpable( -1) then
-      luasnip.jump( -1)
+    elseif luasnip.jumpable(-1) then
+      luasnip.jump(-1)
     else
       fallback()
     end

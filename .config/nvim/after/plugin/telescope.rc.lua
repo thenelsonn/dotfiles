@@ -1,8 +1,6 @@
 local telescope_status, telescope = pcall(require, "telescope")
 local builtin_status, builtin = pcall(require, "telescope.builtin")
-if not telescope_status or not builtin_status then
-  return
-end
+if not telescope_status or not builtin_status then return end
 
 telescope.setup({
   defaults = {
