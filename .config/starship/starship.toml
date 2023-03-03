@@ -15,12 +15,12 @@ add_newline = false
 truncation_length = 8
 truncate_to_repo = true
 truncation_symbol = ""
-format = '[\[$path\] ]($style)'
+format = '[-> ](bold green)[\[$path\] ]($style)'
 style = "bold cyan"
 
 [git_branch]
-format = '[\($branch(:$remote_branch)\) ]($style)'
+format = '[git:\(](bold blue)[$branch(:$remote_branch)]($style)[\) ](bold blue)'
 style = "bold red"
 
 [character]
-format = '[~\$> ](bold green)'
+format = '[\$ ](bold green)'
