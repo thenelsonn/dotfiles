@@ -21,6 +21,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 
+# Screenshot
+bindsym $mod+Ctrl+l exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+
 # Navigation
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -103,7 +106,7 @@ bindsym $mod+r mode "resize"
 
 for_window [class="^.*"] border pixel 2
 
-exec_always nitrogen --restore
+# exec_always source ~/.fehbg
 exec_always compton
 
 gaps inner 10
