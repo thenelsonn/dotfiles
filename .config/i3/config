@@ -106,7 +106,7 @@ bindsym $mod+r mode "resize"
 
 for_window [class="^.*"] border pixel 2
 
-# exec_always source ~/.fehbg
+exec_always source ~/.fehbg
 exec_always compton
 
 gaps inner 10
