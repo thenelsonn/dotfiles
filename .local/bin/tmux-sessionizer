@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sessions=$(tmux list-session | sed -E 's/:.*$//')
+
+if [[ -z $sessions ]]; then 
+  exit 0 
+fi
+
+res=$(for v in $sessions; do echo $v; done | fzf --reverse)
+if [[ -z $res ]]; then
+  exit 0
+fi
+
+if [[ $TMUX ]]; then
+  tmux switch-client -t $res
+fi
