@@ -25,4 +25,4 @@ HISTSIZE=2000           # number of lines in active history
 # ---
 # Imports
 # --------
-. ~/.config/bash/aliases.sh # load aliases
+. ~/.config/zsh/aliases.sh # load aliases
