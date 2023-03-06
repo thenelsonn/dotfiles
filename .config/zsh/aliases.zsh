@@ -1,4 +1,4 @@
-# ~/.config/zsh/aliases.sh: set of bash aliases
+# ~/.config/zsh/aliases.zsh: set of zsh aliases
 
 # ---
 # Github

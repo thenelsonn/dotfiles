@@ -1,4 +1,4 @@
-# ~/.config/zsh/init.sh: general zsh configuration
+# ~/.config/zsh/profile.zsh: general zsh configuration
 
 # ---
 # Colors
@@ -25,5 +25,5 @@ HISTSIZE=2000           # number of lines in active history
 # ---
 # Imports
 # --------
-. ~/.config/zsh/aliases.sh # load aliases
+. ~/.config/zsh/aliases.zsh # load aliases
 . ~/.config/zsh/tmux.zsh # load tmux
