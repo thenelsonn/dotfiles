@@ -9,7 +9,7 @@ for_window [class="^.*"] border pixel 2
 
 exec_always --no-startup-id xset r rate 350 40
 exec_always --no-startup-id ~/.fehbg
-exec_always --no-startup-id compton
+exec_always --no-startup-id picom
 
 bindsym $mod+Return split h; exec --no-startup-id alacritty
 bindsym $mod+d exec --no-startup-id dmenu_run
