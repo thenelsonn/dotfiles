@@ -6,7 +6,7 @@ window:
 font:
   size: 12
   normal:
-    family: Hack
+    family: Hack Nerd Font
 colors:
   name: vscode (dark)
   author: senpai-10
