@@ -26,3 +26,4 @@ HISTSIZE=2000           # number of lines in active history
 # Imports
 # --------
 . ~/.config/zsh/aliases.sh # load aliases
+. ~/.config/zsh/tmux.zsh # load tmux
