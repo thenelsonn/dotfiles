@@ -32,13 +32,9 @@ In order to clone this repository onto your system, execute the following
 set of commands inside your terminal:
     
     git clone --bare https://github.com/thenelsonn/dotfiles $HOME/.cfg
-
-    echo "if [ -f ~/.config/bash/bash.sh ]; then
-        . ~/.config/bash/bash.sh
-    fi" >> $HOME/.bashrc
-    source ~/.bashrc
-
+    echo source ~/.config/zsh/profile.zsh >> ~/.zshrc && source ~/.zshrc
     config config --local status.showUntrackedFiles no
+    config checkout -f
 
 #### Neovim
 
