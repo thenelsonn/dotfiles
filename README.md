@@ -42,31 +42,11 @@ A set of the following commands should cover the installation of
 Neovim and packer:
 
     sudo add-apt-repository ppa:neovim-ppa/unstable
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install neovim
+    sudo apt update && sudo apt install neovim -y
 
     git clone --depth 1 https://github.com/wbthomason/packer.nvim\
         ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 
 **Be aware**: Some Linux distributions may experience issues with 
-adding unstable PPA repositories. You might have to sign them yourself 
-by performing the steps below:
-
-    sudo apt insall gnupg gnupg2 ca-certificates\
-        software-properties-common apt-transport-https -y
-
-    sudo apt-key export <key> | eudo gpg --dearmour -o\
-        /usr/share/keyrings/<package-name>.gpg
-
-Required keys are stored in trusted.gpg file (/etc/apt/trusted.gpg).
-You can view them with the help of the next command:
-
-    sudo apt-key list
-
-After creating/exporting keys, warnings won't be gone because package manager
-doesn't know about those keys yet. Go to /etc/apt/sources.list.d and
-edit files responsible for unsigned PPA repositories to make it look
-the next way:
-
-    deb [signed-by=/usr/share/keyrings/<package-name>.gpg] <link to the unstable ppa repostiory> ...
+adding unstable PPA repositories. 
