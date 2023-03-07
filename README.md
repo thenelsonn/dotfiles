@@ -1,11 +1,12 @@
 # My Public Dotfiles
 
-A set of my public configuration files.
-This repo should be cloned in the home directory (~).
-**However**, consider backing up your configuration
-first.
+A set of my public configuration files which is used to quickly 
+set up a brand-new system with familiar shortcuts, aliases, 
+keybindings, tools, and more.
 
-**Note**: Do not recklessly use my settings unless you know
+**Warning:** Consider backing up your configuration
+before following the [installation guide](#installation)
+down below. Do not recklessly use my settings unless you know
 what they entail.
 
 ## Contents
