@@ -31,21 +31,10 @@ In order to clone this repository onto your system, execute the following
 set of commands inside your terminal:
     
     git clone --bare https://github.com/thenelsonn/dotfiles $HOME/.cfg
+    git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME checkout -f
+
     echo source ~/.config/zsh/profile.zsh >> ~/.zshrc && source ~/.zshrc
     config config --local status.showUntrackedFiles no
-    config checkout -f
 
-#### Neovim
-
-A set of the following commands should cover the installation of
-Neovim and packer:
-
-    sudo add-apt-repository ppa:neovim-ppa/unstable
-    sudo apt update && sudo apt install neovim -y
-
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-
-**Be aware**: Some Linux distributions may experience issues with 
-adding unstable PPA repositories. 
+The official documentation of the products mentioned above will help you 
+complete the installation.
