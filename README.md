@@ -11,6 +11,7 @@ what they entail.
 
 ## Contents
 
+- [i3](https://github.com/i3/i3) - a tiling window manager for X11.
 - [(Neo)vim](https://neovim.io) - hyperextensible Vim-based text editor
 with strong [defaults](https://neovim.io/doc/user/vim_diff.html#nvim-defaults),
 builtin LSP client for semantic code inspection and refactoring, and even more
@@ -19,11 +20,10 @@ with endless number of extensions made by large (Neo)vim's community.
 that comes with sensible defaults, but allows for extensive configuration.
 - [Tmux](https://github.com/tmux/tmux) - open-source terminal multiplexer for 
 Unix-like operating systems.
+- [Z Shell](https://www.zsh.org/) - a shell designed for interactive use, 
+although it is also a powerful scripting language.
 - [Oh My Zsh](https://ohmyz.sh/) - a delightful, open source, community-driven 
 framework for managing your zsh configuration.
-- [zsh](https://www.zsh.org/) - a shell designed for interactive use, 
-although it is also a powerful scripting language.
-- [i3](https://github.com/i3/i3) - a tiling window manager for X11.
 
 ## Installation
 
