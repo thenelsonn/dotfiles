@@ -6,7 +6,7 @@ if [[ -z $sessions ]]; then
   exit 0 
 fi
 
-res=$(for v in $sessions; do echo $v; done | fzf --reverse)
+res=$(for v in $sessions; do echo $v; done | fzf)
 if [[ -z $res ]]; then
   exit 0
 fi
