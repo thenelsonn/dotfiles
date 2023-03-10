@@ -1,6 +1,6 @@
 # My Public Dotfiles
 
-A set of my public configuration files which is used to quickly 
+A set of my public configuration files that is used to quickly 
 set up a brand-new system with familiar shortcuts, aliases, 
 keybindings, tools, and more.
 
