@@ -4,7 +4,7 @@ window:
     columns: 130
     lines: 35
 font:
-  size: 16
+  size: 15
   normal:
     family: UbuntuMono Nerd Font
 colors:
