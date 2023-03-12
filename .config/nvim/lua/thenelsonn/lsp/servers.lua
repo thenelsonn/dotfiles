@@ -12,6 +12,7 @@ M.servers = {
   "jsonls",
   "lua_ls",
   "bashls",
+  "cmake",
   "html"
 }
 
