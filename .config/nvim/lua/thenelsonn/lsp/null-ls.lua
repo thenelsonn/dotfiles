@@ -8,8 +8,8 @@ null_ls.setup({
   sources = {
     formatting.stylua.with({ extra_args = { "--indent-type Spaces", "--indent-width 2" } }),
     formatting.prettierd,
-    formatting.clang_format,
     formatting.rustfmt,
     -- diagnostics.eslint,
+    -- formatting.clang_format,
   },
 })
